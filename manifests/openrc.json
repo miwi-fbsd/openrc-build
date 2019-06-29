@@ -96,7 +96,9 @@
          "default":[  
             "textproc/jq",
             "os/userland",
-            "os/kernel"
+            "os/kernel",
+			"sysutils/pc-installdialog",
+        	"sysutils/pc-sysinstall"
          ]
       },
       "build-all":false,
