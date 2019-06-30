@@ -24,7 +24,7 @@
          "default":[
          ]
       },
-      "file-name":"debug-%%DATE%%-%%GITHASH%%",
+      "file-name":"openrc-%%DATE%%-%%GITHASH%%",
       "install-script":"",
       "iso-packages":{
          "default":[
