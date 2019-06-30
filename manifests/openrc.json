@@ -112,11 +112,7 @@
             "x11_nvidia-driver_UNSET=LINUX",
             "x11_nvidia-driver-340_UNSET=LINUX",
             "x11_nvidia-driver-304_UNSET=LINUX",
-            "security_pinentry-tty_SET+=LIBSECRET",
-            "os_buildworld_UNSET+=BLUETOOTH ZOL BSDINSTALL CALENDAR GAMES GNU_DIFF GNU_GREP HAST EE FINGER FLOPPY FREEBSD_UPDATE HTML IPFILTER IPFW MAIL MAILWRAPPER PORTSNAP PPP QUOTAS RADIUS_SUPPORT SENDMAIL SHAREDOCS SVNLITE TALK TELNET UNBOUND",
-            "os_buildworld_UNSET+=META_MODE",
-            "os_buildkernel_UNSET+=META_MODE",
-            "os_userland_UNSET+=DEBUG TEST ZOL"
+            "security_pinentry-tty_SET+=LIBSECRET"
          ]
       },
       "type":"git",
