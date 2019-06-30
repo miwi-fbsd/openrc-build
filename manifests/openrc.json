@@ -32,9 +32,11 @@
       },
       "iso-base-packages":{
          "default":[
-         "sysutils/pc-installdialog",
-         "sysutils/pc-sysinstall",
-         "textproc/jq"
+		"os/userland",
+            	"os/kernel",
+         	"sysutils/pc-installdialog",
+         	"sysutils/pc-sysinstall",
+         	"textproc/jq"
          ]
       },
       "os-flavors":{  
@@ -97,8 +99,8 @@
             "textproc/jq",
             "os/userland",
             "os/kernel",
-			"sysutils/pc-installdialog",
-        	"sysutils/pc-sysinstall"
+	    "sysutils/pc-installdialog",
+            "sysutils/pc-sysinstall"
          ]
       },
       "build-all":false,
