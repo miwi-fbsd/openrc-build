@@ -13,7 +13,7 @@ pipeline {
     GH_REPO = 'trueos'
     POUDRIERE_BASE = 'trueos'
     POUDRIERE_PORTS = 'trueos'
-    TRUEOS_MANIFEST='${env.WORKSPACE}/i3wm/manifests/debug.json'
+    TRUEOS_MANIFEST='${env.WORKSPACE}/i3wm/manifests/openrc1.json'
     TRUEOS_VERSION = '13.0'
   }
 
@@ -31,7 +31,7 @@ pipeline {
         }
       }
     environment {
-     TRUEOS_MANIFEST="${env.WORKSPACE}/manifests/openrc.json"
+     TRUEOS_MANIFEST="${env.WORKSPACE}/manifests/openrc1.json"
   }
       steps {
         sh 'make ports'
@@ -44,7 +44,7 @@ pipeline {
         }
       }
     environment {
-     TRUEOS_MANIFEST="${env.WORKSPACE}/manifests/openrc.json"
+     TRUEOS_MANIFEST="${env.WORKSPACE}/manifests/openrc1.json"
   }
       steps {
         sh 'make iso'
