@@ -1,124 +1,169 @@
-{  
-   "base-packages":{  
-      "world-flags":{  
-         "default":[  
-            "MALLOC_PRODUCTION=YES",
-            "WITHOUT_ASSERT_DEBUG=ON"
-         ]
-      },
-      "kernel-flags":{  
-         "default":[  
-            "KERNCONF=GENERIC-NODEBUG"
-         ]
-      },
-      "branch":"trueos/master",
-      "repo":"https://github.com/trueos/trueos"
-   },
-   "iso":{  
-      "auto-install-packages":{
-         "default":[
-         ]
-      },
-      "auto-install-script":"",
-      "dist-packages":{
-         "default":[
-         ]
-      },
-      "file-name":"trueos-%%DATE%%-%%GITHASH%%",
-      "install-script":"",
-      "iso-packages":{
-         "default":[
-         ]
-      },
-      "iso-base-packages":{
-         "default":[
-		"os/userland",
-            	"os/kernel",
-         	"sysutils/pc-installdialog",
-         	"sysutils/pc-sysinstall",
-         	"textproc/jq"
-         ]
-      },
-      "os-flavors":{  
-         "generic":{  
-            "description":"Default TrueOS world / kernel"
-         }
-      },
-      "overlay":{  
-
-      },
-      "prune":{  
-         "default":[  
-            "METALOG",
-            "/usr/local/share/examples",
-            "/usr/local/llvm60/bin",
-            "/usr/bin/cc*",
-            "/usr/bin/clang*",
-            "/usr/bin/cpp",
-            "/usr/bin/cpp",
-            "/usr/bin/c++",
-            "/usr/bin/lldb",
-            "/usr/bin/ld.lld",
-            "/usr/bin/llvm*",
-            "/usr/bin/objdump*",
-            "/usr/bin/svn*",
-            "/usr/lib/clang",
-            "/usr/share/man",
-            "/usr/share/i18n",
-            "/usr/share/openssl/man",
-            "/usr/include",
-            "/usr/lib32"
-         ]
-      }
-   },
-   "pkg-repo":{  
-      "pubKey":[  
-         "-----BEGIN PUBLIC KEY-----",
-         "MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAx4YxSavJkE7HjopkMtgK",
-         "tk/plcnImzfx0MmdK3ijv2724+v810kbAmRI01aiooQvusfcQ5OOyNpAzxwKMTTB",
-         "6bo46YtrnYBTP5G1mNqTRxL5Sg03Kpwcb6fCZ4gYOqTNPmhV6BskhRrfGOzNazcd",
-         "cb8CeqTeL7A44vwkyufQrSNgT9+ByCGuxaEp2os+GEbELyWZMmpQD6s2gAgpXuB6",
-         "K/f7pm9ZsULjJ+ZKc31TjgMTyVA07niocjDxiD2KVEbiagirnxA7BLa66u58B1ol",
-         "tnvOD8JNkGONT2LJhWOMXowZ8fCQ6Ec6ws2SY0UJ14d4w7xnz7U9+STHRYlJnNyl",
-         "ZYNLZ7UK7zyILWhAjkmq3TUaw7o456+QIyf4hA/he9UZhwhgRGNjJCUATbEUT+PF",
-         "65ox6+rT5g/jjDlY6kxfvLCTYJG/Arlj9FCAV/vBa/0lUu1OjivxPNK694G4tVHl",
-         "/z1yApzgzbOgkOY1caPCkGgniD2N4rySm744RxVXonrKmso9nsG0tGrDTC72M39Y",
-         "xgzt2x+NCDhBxZ6EWkqXH6Xk5yOPUV8XDTjqwOnm4XvyD9jzxAiK9Bex6CxKNfph",
-         "9p42Kr3QZPVXjZofqcfhJxZ4Nv0s09K1R1yqNzMmO7Aa2uF2F6ChQ/m6Z41hdaeO",
-         "AxxsOeRYAlBFJ4oo2cFVyqkCAwEAAQ==",
-         "-----END PUBLIC KEY-----"
-      ],
-      "url":"http://pkg.fbsd.io/i3wm/pkg/${ABI}/latest"
-   },
-   "pkg-repo-name":"TrueOS",
-   "pkg-train-name":"debug",
-   "ports":{  
-      "branch":"trueos-master",
-      "build":{  
-         "default":[  
-            "textproc/jq",
-            "os/userland",
-            "os/kernel",
-	    "sysutils/pc-installdialog",
-            "sysutils/pc-sysinstall"
-         ]
-      },
-      "build-all":false,
-      "make.conf":{  
-         "default":[  
-            "OPTIONS_UNSET+=DOCS DEBUG ZOL NLS EXAMPLES JAVA CUPS HAL DBUS ALSA PULSEAUDIO GCONF DTRACE PROFILE CONSOLEKIT HELP TCLMAN MANPAGES MAN3 WAYLAND TEST GITWEB IPV6 GTK2 PYTHON2 TESTS",
-            "OPTIONS_SET+= GTK3 PYTHON3",
-            "security_sudo_SET+=DISABLE_AUTH",
-            "x11-drivers_xorg-drivers_SET=AMDGPU ATI KEYBOARD INTEL MOUSE MUTOUCH NOUVEAU NV OPENCROME PENMOUNT R128 LIBINPUT SYNAPTICS SCFB VESA",
-            "x11_nvidia-driver_SET=ACPI_PM",
-            "x11_nvidia-driver_UNSET=LINUX",
-            "x11_nvidia-driver-340_UNSET=LINUX",
-            "x11_nvidia-driver-304_UNSET=LINUX",
-            "security_pinentry-tty_SET+=LIBSECRET"
-         ]
-      },
-      "type":"git",
-      "url":"https://github.com/trueos/trueos-ports"
-   },
-   "version":"1.1"
+{
+	"base-packages": {
+		"world-flags": {
+			"default": [
+				"MALLOC_PRODUCTION=YES",
+				"WITHOUT_ASSERT_DEBUG=ON"
+			]
+		},
+		"kernel-flags": {
+			"default": [
+				"KERNCONF=GENERIC-NODEBUG"
+			]
+		},
+		"branch":"trueos/master",
+		"repo":"https://github.com/trueos/trueos"
+	},
+	"iso": {
+		"auto-install-packages": {
+			"default": [
+				"security/ca_root_nss",
+				"security/sudo",
+				"sysutils/ipmitool",
+				"sysutils/dmidecode",
+				"sysutils/tmux",
+				"security/gnupg",
+				"sysutils/sysup",
+				"textproc/jq"
+			]
+		},
+		"auto-install-script": "",
+		"dist-packages": {
+			"default": [
+				"sysutils/openzfs"
+			]
+		},
+		"dist-packages-glob": {
+			"default": [
+				"os-minimal-kernel",
+				"os-minimal-userland",
+				"os-nozfs-kernel",
+				"os-nozfs-userland"
+			]
+		},
+		"file-name": "TrueOS-Snapshot-Builder-x64-%%GITHASH%%-%%DATE%%",
+		"install-script": "",
+		"iso-base-packages": {
+			"default": [
+				"os-generic-userland",
+				"os-generic-kernel"
+			]
+		},
+		"iso-packages": {
+			"default": [
+				"sysutils/openzfs",
+				"sysutils/pc-installdialog",
+				"sysutils/pc-sysinstall",
+				"textproc/jq"
+			]
+		},
+		"os-flavors": {
+			"generic": {
+				"description":"Default TrueOS world / kernel"
+			},
+			"minimal":{
+				"description":"Minimal world with less optional features."
+			},
+			"nozfs":{
+				"description":"Base system without built-in ZFS"
+			},
+			"openzfs":{
+				"description":"Base system with OpenZFS from ports",
+				"flavor":"nozfs",
+				"packages":"openzfs"
+			}
+		},
+		"overlay": {
+		},
+		"prune": {
+			"default": [
+				"METALOG",
+				"/usr/local/share/examples",
+				"/usr/local/include",
+				"/usr/bin/cc*",
+				"/usr/bin/clang*",
+				"/usr/bin/cpp",
+				"/usr/bin/cpp",
+				"/usr/bin/c++",
+				"/usr/bin/lldb",
+				"/usr/bin/ld.lld",
+				"/usr/bin/llvm*",
+				"/usr/bin/objdump*",
+				"/usr/bin/svn*",
+				"/usr/lib/clang",
+				"/usr/share/man",
+				"/usr/share/i18n",
+				"/usr/share/openssl/man",
+				"/usr/include",
+				"/usr/lib32"
+			]
+		}
+	},
+	"pkg-repo": {
+		"pubKey": [
+			"-----BEGIN PUBLIC KEY-----",
+			"MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAx4YxSavJkE7HjopkMtgK",
+			"tk/plcnImzfx0MmdK3ijv2724+v810kbAmRI01aiooQvusfcQ5OOyNpAzxwKMTTB",
+			"6bo46YtrnYBTP5G1mNqTRxL5Sg03Kpwcb6fCZ4gYOqTNPmhV6BskhRrfGOzNazcd",
+			"cb8CeqTeL7A44vwkyufQrSNgT9+ByCGuxaEp2os+GEbELyWZMmpQD6s2gAgpXuB6",
+			"K/f7pm9ZsULjJ+ZKc31TjgMTyVA07niocjDxiD2KVEbiagirnxA7BLa66u58B1ol",
+			"tnvOD8JNkGONT2LJhWOMXowZ8fCQ6Ec6ws2SY0UJ14d4w7xnz7U9+STHRYlJnNyl",
+			"ZYNLZ7UK7zyILWhAjkmq3TUaw7o456+QIyf4hA/he9UZhwhgRGNjJCUATbEUT+PF",
+			"65ox6+rT5g/jjDlY6kxfvLCTYJG/Arlj9FCAV/vBa/0lUu1OjivxPNK694G4tVHl",
+			"/z1yApzgzbOgkOY1caPCkGgniD2N4rySm744RxVXonrKmso9nsG0tGrDTC72M39Y",
+			"xgzt2x+NCDhBxZ6EWkqXH6Xk5yOPUV8XDTjqwOnm4XvyD9jzxAiK9Bex6CxKNfph",
+			"9p42Kr3QZPVXjZofqcfhJxZ4Nv0s09K1R1yqNzMmO7Aa2uF2F6ChQ/m6Z41hdaeO",
+			"AxxsOeRYAlBFJ4oo2cFVyqkCAwEAAQ==",
+			"-----END PUBLIC KEY-----"
+		],
+		"url": "https://pkg.trueos.org/pkg/snapshot/${ABI}/latest"
+	},
+	"pkg-repo-name": "TrueOS",
+	"pkg-train-name": "snapshot",
+	"ports": {
+		"branch": "trueos-master",
+		"build": {
+			"default": [
+				"archivers/pigz",
+				"devel/git",
+				"dns/mDNSResponder_nss",
+				"editors/vim-console",
+				"lang/python",
+				"lang/python2",
+				"lang/python3",
+				"java/openjdk8",
+				"net/rsync",
+				"os/userland@all",
+				"os/userland-base@all",
+				"os/userland-devel@all",
+				"os/userland-debug@all",
+				"os/userland-lib32@all",
+				"os/userland-lib32-devel@all",
+				"os/kernel@all",
+				"os/kernel-debug@all",
+				"os/kernel-debug-symbols@all",
+				"os/kernel-symbols@all",
+				"ports-mgmt/poudriere-trueos",
+				"shells/zsh",
+				"textproc/jq",
+				"www/nginx"
+			]
+		},
+		"build-all": false,
+		"make.conf": {
+			"default": [
+				"java_openjdk8_UNSET+=ALSA",
+				"java_openjdk8_UNSET+=X11",
+				"security_ca_root_nss_UNSET+=ETCSYMLINK",
+				"security_ca_root_nss_SET+=LOCALSYMLINK"
+			]
+		},
+		"type": "git",
+		"url": "https://github.com/trueos/trueos-ports"
+	},
+	"poudriere-conf": [
+		"ALLOW_MAKE_JOBS_PACKAGES=\"openjdk8* llvm* mpfr*\"",
+		"FLAVOR_DEFAULT_ALL=yes"
+	],
+	"version": "1.1"
 }
