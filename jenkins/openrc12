@@ -9,8 +9,8 @@ pipeline {
   agent { label 'i3wm' }
 
   environment {
-    POUDRIERE_BASE = 'openrc12'
-    POUDRIERE_PORTS = 'openrc12'
+    POUDRIERE_BASE = 'openrc12-1'
+    POUDRIERE_PORTS = 'openrc12-1'
     TRUEOS_VERSION = '12.0'
   }
 
