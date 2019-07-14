@@ -17,6 +17,7 @@
    "iso":{  
       "auto-install-packages":{
          "default":[
+			"security/ca_root_nss"
          ]
       },
       "auto-install-script":"",
@@ -88,7 +89,7 @@
          "AxxsOeRYAlBFJ4oo2cFVyqkCAwEAAQ==",
          "-----END PUBLIC KEY-----"
       ],
-      "url":"http://pkg.fbsd.io/i3wm/pkg/${ABI}/latest"
+      "url":"https://pkg.penbsd.org/openrci12/pkg/${ABI}/latest"
    },
    "pkg-repo-name":"TrueOS",
    "pkg-train-name":"debug",
@@ -99,7 +100,7 @@
             "textproc/jq",
             "os/userland",
             "os/kernel",
-	    "sysutils/pc-installdialog",
+	    	"sysutils/pc-installdialog",
             "sysutils/pc-sysinstall"
          ]
       },
