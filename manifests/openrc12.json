@@ -25,7 +25,7 @@
          "default":[
          ]
       },
-      "file-name":"openrc12-%%DATE%%-%%GITHASH%%",
+      "file-name":"TrueOS12-%%DATE%%-%%GITHASH%%",
       "install-script":"",
       "iso-packages":{
          "default":[
