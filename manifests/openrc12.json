@@ -8,7 +8,7 @@
       },
       "kernel-flags":{  
          "default":[  
-            "KERNCONF=GENERIC-NODEBUG"
+            "KERNCONF=GENERIC"
          ]
       },
 	  "branch":"trueos/stable/12",
