@@ -12,7 +12,7 @@
          ]
       },
 	  "branch":"trueos/stable/12",
-      "repo":"https://github.com/miwi-fbsd/trueos"
+      "repo":"https://github.com/trueos/trueos"
    },
    "iso":{  
       "auto-install-packages":{
